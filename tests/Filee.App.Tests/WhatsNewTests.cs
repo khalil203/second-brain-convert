@@ -29,7 +29,7 @@ public class WhatsNewTests
     private static readonly Version V2 = new(2, 0, 0);
 
     private static SlideDeck Deck(string version) =>
-        new(SlideDeck.TryParseVersion(version)!, [new Slide("a", new Uri("avares://Filee/a.webp"), "t", "x")]);
+        new(SlideDeck.TryParseVersion(version)!, [new Slide("a", new Uri("avares://SecondBrainConvert/a.webp"), "t", "x")]);
 
     // ───────────────────────── Manifests ─────────────────────────
 
@@ -45,7 +45,7 @@ public class WhatsNewTests
         foreach (var slide in deck.Slides)
         {
             Assert.True(AssetLoader.Exists(slide.Media), $"{slide.Media} is missing");
-            Assert.StartsWith("avares://Filee/Assets/WhatsNew/2.0.0/", slide.Media.ToString(), StringComparison.Ordinal);
+            Assert.StartsWith("avares://SecondBrainConvert/Assets/WhatsNew/2.0.0/", slide.Media.ToString(), StringComparison.Ordinal);
             Assert.Contains(slide.TitleKey, english.Keys);
             Assert.Contains(slide.TextKey, english.Keys);
         }
@@ -73,7 +73,7 @@ public class WhatsNewTests
     [InlineData(null, "crop.webp", 2)]
     public void Localized_media_use_an_exact_variant_and_their_own_poster(string? language, string path, int poster)
     {
-        var folder = new Uri("avares://Filee/Assets/WhatsNew/2.0.0/");
+        var folder = new Uri("avares://SecondBrainConvert/Assets/WhatsNew/2.0.0/");
         var deck = SlideDeck.Parse("""
             { "version": "2.0.0", "slides": [
               { "id": "crop", "media": "crop.webp", "poster": 2, "title": "t", "text": "x",
@@ -138,7 +138,7 @@ public class WhatsNewTests
     [Fact]
     public void A_manifest_is_read_leniently_and_safely()
     {
-        var folder = new Uri("avares://Filee/Assets/WhatsNew/3.1.0/");
+        var folder = new Uri("avares://SecondBrainConvert/Assets/WhatsNew/3.1.0/");
         var deck = SlideDeck.Parse("""
             {
               // comments and trailing commas are fine
@@ -158,7 +158,7 @@ public class WhatsNewTests
         Assert.Equal(new Version(3, 1, 0), deck.Version);
         Assert.Equal("3.1", deck.DisplayVersion);
         var slide = Assert.Single(deck.Slides);
-        Assert.Equal(new Uri("avares://Filee/Assets/WhatsNew/3.1.0/one.webp"), slide.Media);
+        Assert.Equal(new Uri("avares://SecondBrainConvert/Assets/WhatsNew/3.1.0/one.webp"), slide.Media);
         Assert.Equal(("a.title", "a.text"), (slide.TitleKey, slide.TextKey));
         Assert.Equal(12, slide.PosterFrame);
 
