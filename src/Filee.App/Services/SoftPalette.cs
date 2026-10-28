@@ -12,8 +12,8 @@ namespace Filee.App.Services;
 internal static class SoftPalette
 {
     /// <summary>The default accent colour (the first swatch of the Theme page).</summary>
-    public const string DefaultAccent = "#0E9E7C";
-    public const string DefaultDarkAccent = "#2EE6B6";
+    public const string DefaultAccent = "#0891B2";
+    public const string DefaultDarkAccent = "#22D3EE";
 
     /// <summary>The default corner radius (ThemeSettings.CornerRadius).</summary>
     public const double DefaultCornerRadius = 16;

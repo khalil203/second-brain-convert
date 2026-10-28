@@ -14,7 +14,7 @@
          parameters of a member is fine (CS1573). -->
     <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
 
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Product>Second Brain Convert</Product>
     <Authors>Khalil Ben Salah</Authors>
     <Copyright>Copyright (c) 2026 Khalil Ben Salah. Based on Filee, (c) 2026 Myeonggu Kim (KnifeLemon) and Filee contributors (MIT)</Copyright>

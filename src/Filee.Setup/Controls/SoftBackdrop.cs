@@ -13,7 +13,7 @@ public sealed class SoftBackdrop : Control
         Border.BackgroundProperty.AddOwner<SoftBackdrop>();
 
     public static readonly StyledProperty<Color> AccentProperty =
-        AvaloniaProperty.Register<SoftBackdrop, Color>(nameof(Accent), Color.Parse("#0E9E7C"));
+        AvaloniaProperty.Register<SoftBackdrop, Color>(nameof(Accent), Color.Parse("#0891B2"));
 
     public static readonly StyledProperty<Color> SecondProperty =
         AvaloniaProperty.Register<SoftBackdrop, Color>(nameof(Second), Color.Parse("#1D9E75"));
