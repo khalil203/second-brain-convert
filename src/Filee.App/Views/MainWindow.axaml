@@ -15,7 +15,8 @@
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="10" Margin="8,0,0,20">
           <Image Source="avares://SecondBrainConvert/Assets/Icons/filee.png" Width="30" Height="30" />
           <StackPanel VerticalAlignment="Center">
-            <TextBlock Text="Second Brain Convert" FontSize="18" FontWeight="Bold" />
+            <TextBlock Text="Second Brain" FontSize="17" FontWeight="Bold" />
+            <TextBlock Text="CONVERT" FontSize="10.5" FontWeight="Bold" LetterSpacing="1.6" Foreground="{DynamicResource AccentBrush}" Margin="0,-2,0,2" />
             <TextBlock Classes="caption" Text="{DynamicResource app.tagline}" />
           </StackPanel>
         </StackPanel>

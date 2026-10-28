@@ -37,7 +37,7 @@ public sealed class ThemeService(IPlatformServices platform)
         new("monochrome", "#1F1E1D", "#F1EFE8"),
         new("lavender", "#7F77DD", "#BCAEE5"),
         new("peach", "#E07A70", "#F29B91"),
-        new("mint", "#529B7D", "#88D5B1"),
+        new("mint", "#0E9E7C", "#2EE6B6"),
         new("rose", "#E86483", "#F79BB0"),
         new("sky", "#5B8BE3", "#98B8F6"),
         new("amber", "#CB852A", "#F0BA6A"),
@@ -91,7 +91,8 @@ public sealed class ThemeService(IPlatformServices platform)
         var baseColor = Color.TryParse(theme.Accent, out var parsed) ? parsed : defaultColor;
 
         var lightAccent = preset?.LightColor ?? baseColor;
-        var darkAccent = preset?.DarkColor ?? baseColor;
+        // The Second Brain default green gets its brighter mint partner in dark mode, like a preset.
+        var darkAccent = preset?.DarkColor ?? (baseColor == defaultColor ? Color.Parse(SoftPalette.DefaultDarkAccent) : baseColor);
 
         // Radii, fonts, flow direction
         SoftPalette.ApplyCornerRadius(res, theme.CornerRadius);
@@ -131,7 +132,7 @@ public sealed class ThemeService(IPlatformServices platform)
                 // Clear top-level so dark mode resolves silvery white and light mode resolves charcoal
                 SoftPalette.ClearTopLevelAccent(res);
             }
-            else if (preset != null)
+            else if (preset != null || darkAccent != lightAccent)
             {
                 var lightDict = new ResourceDictionary();
                 var darkDict = new ResourceDictionary();

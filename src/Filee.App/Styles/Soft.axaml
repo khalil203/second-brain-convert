@@ -48,11 +48,11 @@
           <SolidColorBrush x:Key="SuccessBrush" Color="#5DCAA5" />
           <SolidColorBrush x:Key="WarningBrush" Color="#EF9F27" />
           <BoxShadows x:Key="CardShadow">0 1 3 0 #40000000, 0 8 24 0 #33000000</BoxShadows>
-          <SolidColorBrush x:Key="AccentBrush" Color="#0E9E7C" />
-          <SolidColorBrush x:Key="AccentSoftBrush" Color="#2E0E9E7C" />
-          <SolidColorBrush x:Key="AccentFaintBrush" Color="#170E9E7C" />
-          <SolidColorBrush x:Key="AccentStrongBrush" Color="#0B7A60" />
-          <SolidColorBrush x:Key="OnAccentBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="AccentBrush" Color="#2EE6B6" />
+          <SolidColorBrush x:Key="AccentSoftBrush" Color="#2E2EE6B6" />
+          <SolidColorBrush x:Key="AccentFaintBrush" Color="#172EE6B6" />
+          <SolidColorBrush x:Key="AccentStrongBrush" Color="#8AF0D3" />
+          <SolidColorBrush x:Key="OnAccentBrush" Color="#04231B" />
           <SolidColorBrush x:Key="ButtonBackground" Color="#262624" />
           <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#31312E" />
           <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#3A3A36" />
