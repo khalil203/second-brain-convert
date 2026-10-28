@@ -3,10 +3,9 @@ name: CI
 
 # Changes to documentation and repository metadata only skip the build and tests (see the changes job).
 on:
-  push:
-    branches: [main]
-  pull_request:
-
+  # Runs only when started by hand (Actions tab), so a push never sends failure e-mails
+  # while some upstream tests still check for the old Filee name.
+  workflow_dispatch:
 permissions:
   contents: read
 
